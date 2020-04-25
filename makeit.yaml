@@ -10,7 +10,7 @@ Resources:
         - Name: MasterTrigger
           CustomData: Project ID 12345
           DestinationArn:
-            Ref: SNSarn
+            Ref:
           Branches:
             - Master
           Events:
