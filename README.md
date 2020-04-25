@@ -1,2 +1,2 @@
 # BigTentRobot
-Big Ten Repo for the Robots!
+Big Tent Repo for the Robots!
