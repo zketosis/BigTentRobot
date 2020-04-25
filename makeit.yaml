@@ -4,12 +4,12 @@ Type: AWS::CodeCommit::Repository
   Properties:
     RepositoryName: MyRepoName
     RepositoryDescription: a description
-    Triggers:
-    - Name: MasterTrigger
-      CustomData: Project ID 12345
+      Triggers:
+        - Name: MasterTrigger
+        CustomData: Project ID 12345
       DestinationArn:
         Ref: SNSarn
       Branches:
-      - Master
+        - Master
       Events:
-      - all
+        - all
