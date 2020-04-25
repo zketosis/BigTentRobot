@@ -9,8 +9,6 @@ Resources:
       Triggers:
         - Name: MasterTrigger
           CustomData: Project ID 12345
-          DestinationArn:
-            Ref:
           Branches:
             - Master
           Events:
