@@ -1,15 +1,15 @@
 AWSTemplateFormatVersion: "2010-09-09"
-TheBigRepo:
-Type: AWS::CodeCommit::Repository
+MyRepo:
+  Type: AWS::CodeCommit::Repository
   Properties:
     RepositoryName: MyRepoName
     RepositoryDescription: a description
-      Triggers:
-        - Name: MasterTrigger
+    Triggers:
+      - Name: MasterTrigger
         CustomData: Project ID 12345
-      DestinationArn:
-        Ref: SNSarn
-      Branches:
-        - Master
-      Events:
-        - all
+        DestinationArn:
+          Ref: SNSarn
+        Branches:
+          - Master
+        Events:
+          - all
