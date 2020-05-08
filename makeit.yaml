@@ -1,8 +1,18 @@
 AWSTemplateFormatVersion: "2010-09-09"
 Description: Create some Stuff
 Resources:
-  MyRepo:
+  RepoVPC:
     Type: AWS::CodeCommit::Repository
     Properties:
-      RepositoryName: MyRepoName
-      RepositoryDescription: a description
+      RepositoryName: VPCsets
+      RepositoryDescription: Setting up VPC for micro dev, integration, dev, not QA! PreProd or Prod!
+  RepoInstance:
+    Type: AWS::CodeCommit::Repository
+    Properties:
+      RepositoryName: Instancebuilds
+      RepositoryDescription: Createing base instances or containers for all environments
+  RepoBackend:
+    Type: AWS::CodeCommit::Repository
+    Properties:
+      RepositoryName: AppBE
+      RepositoryDescription: Back End app of admin and all that is not usually seen; Operations land.
